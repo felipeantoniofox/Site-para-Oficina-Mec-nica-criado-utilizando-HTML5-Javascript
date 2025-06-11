@@ -1,0 +1,189 @@
+/* Importação da fonte Roboto, opcionalmente utilizável no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset básico e definição de fonte principal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kulim Park', 'Times New Roman', Times, serif;
+}
+
+/* Estilo de fundo da página com imagem fixa */
+body {
+  background-image: url("../images/bg-signin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Centralização do conteúdo principal */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Cartão com efeito de vidro e sombra */
+.card {
+  background-color: rgba(15, 15, 15, 0.2);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título principal estilizado */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e79b28;
+}
+
+/* Container do campo com label flutuante */
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin: 5% 0;
+}
+
+/* Campos de entrada personalizados */
+.label-float input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #e79b28;
+  background-color: transparent;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Efeito ao focar no input */
+.label-float input:focus {
+  border-bottom: 2px solid #d4c600;
+}
+
+/* Label flutuante */
+.label-float label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  color: #e79b28;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Label sobe quando input está preenchido ou focado */
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #d4c600;
+}
+
+/* Botão estilizado */
+button {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #e79b28;
+  color: #d4c600;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Hover no botão */
+button:hover {
+  background-color: #f0ad4a;
+  color: #fff;
+}
+
+/* Flex container para centralização horizontal */
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Linha divisória */
+hr {
+  margin: 10% auto;
+  width: 60%;
+  border: 1px solid #e79b28;
+}
+
+/* Parágrafos estilizados */
+p {
+  color: #d4c600;
+  font-size: 14pt;
+  text-align: center;
+}
+
+/* Links personalizados */
+a {
+  color: #e79b28;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4c600;
+}
+
+/* Ícone para exibir/ocultar senha */
+.fa-eye {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #e79b28;
+}
+
+/* Mensagem de erro */
+#msgError {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+  .label-float input {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 13pt;
+  }
+}

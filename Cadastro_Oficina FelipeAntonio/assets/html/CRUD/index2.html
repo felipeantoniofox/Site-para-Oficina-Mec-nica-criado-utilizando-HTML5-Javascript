@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cadastro de Funcionários</title>
+
+  <!-- Estilos do sistema -->
+  <link rel="stylesheet" href="style2.css" />
+
+  <!-- Ícones Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="container">
+    
+    <!-- Cabeçalho com botão de inclusão -->
+    <header class="header">
+      <h1>Cadastro de Funcionários</h1>
+      <button id="new" onclick="openModal()" aria-label="Adicionar novo funcionário">
+        Incluir
+      </button>
+    </header>
+
+    <!-- Tabela de funcionários -->
+    <section class="divTable" aria-label="Tabela de funcionários">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Função</th>
+            <th>Salário</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- As linhas da tabela serão adicionadas dinamicamente via JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Modal de cadastro/edição -->
+    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal">
+        <form id="formFuncionario">
+          <h2 id="modalTitle">Informações do Funcionário</h2>
+
+          <label for="m-nome">Nome</label>
+          <input id="m-nome" name="nome" type="text" required />
+
+          <label for="m-funcao">Função</label>
+          <input id="m-funcao" name="funcao" type="text" required />
+
+          <label for="m-salario">Salário</label>
+          <input id="m-salario" name="salario" type="number" required />
+
+          <button type="submit" id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Script com a lógica do CRUD -->
+  <script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Ícones da Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/signup.css" />
+  
+  <title>Cadastro</title>
+</head>
+<body>
+  <main class="container">
+    <section class="card" role="form" aria-labelledby="tituloCadastro">
+      <h1 id="tituloCadastro">Cadastrar</h1>
+
+      <!-- Área de mensagens de erro e sucesso -->
+      <div id="msgError" aria-live="assertive"></div>
+      <div id="msgSuccess" aria-live="polite"></div>
+
+      <!-- Campo Nome -->
+      <div class="label-float">
+        <input type="text" id="nome" name="nome" placeholder=" " required />
+        <label for="nome" id="labelNome">Nome</label>
+      </div>
+
+      <!-- Campo Usuário -->
+      <div class="label-float">
+        <input type="text" id="usuario" name="usuario" placeholder=" " required />
+        <label for="usuario" id="labelUsuario">Usuário</label>
+      </div>
+
+      <!-- Campo Senha -->
+      <div class="label-float">
+        <input type="password" id="senha" name="senha" placeholder=" " required />
+        <label for="senha" id="labelSenha">Senha</label>
+        <i id="verSenha" class="fa fa-eye" aria-hidden="true" tabindex="0" title="Mostrar/ocultar senha"></i>
+      </div>
+
+      <!-- Campo Confirmar Senha -->
+      <div class="label-float">
+        <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
+        <label for="confirmSenha" id="labelConfirmSenha">Confirmar Senha</label>
+        <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true" tabindex="0" title="Mostrar/ocultar senha"></i>
+      </div>
+
+      <!-- Botão de Cadastro -->
+      <div class="justify-center">
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script com lógica de cadastro -->
+  <script src="../js/signup.js"></script>
+</body>
+</html>

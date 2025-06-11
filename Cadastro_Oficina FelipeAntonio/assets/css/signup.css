@@ -1,0 +1,170 @@
+/* Importando fonte Roboto para uso opcional */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Reset básico e definição de fonte principal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kulim Park', 'Times New Roman', Times, serif;
+  color: white;
+}
+
+/* Estilo de fundo para a página principal */
+body {
+  background-image: url("../images/bg-signup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container centralizado */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card com efeito de vidro (glassmorphism) */
+.card {
+  background-color: rgba(15, 15, 15, 0.2);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(15px);
+}
+
+/* Título centralizado */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Container do input com efeito flutuante */
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin: 5% 0;
+}
+
+/* Input estilizado com transição */
+.label-float input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  transition: border-bottom 0.3s ease;
+}
+
+/* Efeito ao focar no input */
+.label-float input:focus {
+  border-bottom: 2px solid #2965b4;
+}
+
+/* Label sobreposto ao input com transição */
+.label-float label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  color: #fff;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Label se move para cima quando o input está focado ou preenchido */
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #2d70c7;
+}
+
+/* Estilo do botão */
+button {
+  background-color: transparent;
+  border: 2px solid #006eff;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+  background-color: #2986ff;
+  color: #fff;
+}
+
+/* Centralização flexível de elementos */
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ícone de olho (mostrar senha) */
+.fa-eye {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #2986ff;
+}
+
+/* Mensagem de erro */
+#msgError {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Mensagem de sucesso */
+#msgSuccess {
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+  .label-float input {
+    font-size: 15px;
+  }
+}

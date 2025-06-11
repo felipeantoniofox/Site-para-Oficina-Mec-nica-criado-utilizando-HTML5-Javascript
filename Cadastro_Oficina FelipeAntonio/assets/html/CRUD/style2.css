@@ -1,0 +1,251 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* Reset e configuração base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* Estilização do corpo da página */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../CRUD/bg-crud.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Estilização padrão para botões */
+button {
+  cursor: pointer;
+}
+
+/* Container principal da aplicação */
+.container {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cabeçalho do CRUD */
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 12px;
+}
+
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  word-break: break-word;
+}
+
+/* Botão para adicionar novo item */
+#new {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(25, 143, 2);
+  color: white;
+}
+
+/* Área da tabela com rolagem */
+.divTable {
+  padding: 10px;
+  width: 100%;
+  height: inherit;
+  overflow: auto;
+}
+
+/* Scroll personalizado */
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-word;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+
+tbody tr td {
+  vertical-align: top;
+  padding: 6px;
+  max-width: 50px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: left;
+}
+
+/* Ações da tabela (editar/excluir) */
+thead tr th.acao {
+  width: 100px !important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto !important;
+  }
+
+  td button i {
+    font-size: 20px !important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90% !important;
+  }
+
+  .modal label {
+    font-size: 12px !important;
+  }
+}
+
+/* Modal container */
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do modal */
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Rótulos e campos dentro do modal */
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+/* Botão de salvar no modal */
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(25, 143, 2);
+  color: white;
+  font-weight: bold;
+}
+
+/* Ativação do modal */
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s ease;
+}
+
+/* Animação de entrada do modal */
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Estilização dos ícones nos botões de ação */
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}

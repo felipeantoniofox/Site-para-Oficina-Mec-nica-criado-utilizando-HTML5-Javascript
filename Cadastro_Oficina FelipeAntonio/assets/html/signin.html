@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Ícones da Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  
+  <!-- Estilos personalizados da página -->
+  <link rel="stylesheet" href="../css/signin.css" />
+
+  <title>Login</title>
+</head>
+<body>
+  <!-- Container principal centralizado -->
+  <main class="container">
+    <!-- Card com formulário de login -->
+    <section class="card" role="form" aria-labelledby="tituloLogin">
+      <h1 id="tituloLogin">Entrar</h1>
+
+      <!-- Mensagem de erro (inicialmente oculta) -->
+      <div id="msgError" aria-live="assertive" style="display: none; color: red; margin-bottom: 1em;"></div>
+
+      <!-- Campo de usuário -->
+      <div class="label-float">
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          placeholder=" "
+          required
+        />
+        <label for="usuario" id="userLabel">Usuário</label>
+      </div>
+
+      <!-- Campo de senha -->
+      <div class="label-float">
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder=" "
+          required
+        />
+        <label for="senha" id="senhaLabel">Senha</label>
+        <i class="fa fa-eye" id="verSenha" aria-hidden="true" tabindex="0" title="Mostrar/ocultar senha"></i>
+      </div>
+
+      <!-- Botão de login -->
+      <div class="justify-center">
+        <button type="button" onclick="entrar()">Entrar</button>
+      </div>
+
+      <!-- Linha divisória -->
+      <div class="justify-center">
+        <hr />
+      </div>
+
+      <!-- Link para cadastro -->
+      <p>
+        Não tem uma conta?
+        <a href="./signup.html">Cadastre-se</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Script com a lógica de login -->
+  <script src="../js/signin.js"></script>
+</body>
+</html>
